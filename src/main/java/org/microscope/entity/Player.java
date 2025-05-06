@@ -1,11 +1,24 @@
 package org.microscope.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "player")
 public class Player {
+    @Id
     protected String email;
 
     protected String username;
 
     protected String password;
+
+    public Player() {
+        this.email = null;
+        this.username = null;
+        this.password = null;
+    }
 
     public Player(String email, String username, String password) {
         this.email = email;
